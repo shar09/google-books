@@ -1,0 +1,27 @@
+.navbar {
+    width: 100%;
+    min-height: 8vh;
+    background-color: #eb5a55;   
+}
+
+.nav-items {
+    list-style: none;
+    padding: 2vh;
+    margin: 0;  
+    display: flex;
+    cursor: pointer;
+}
+
+.home-link {
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.page-links {
+    font-size: 1.1em;
+    color: #efefef;
+    padding: 0.47vh;
+    margin-right: 0.5rem;
+}
