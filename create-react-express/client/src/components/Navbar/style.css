@@ -25,3 +25,7 @@
     padding: 0.47vh;
     margin-right: 0.5rem;
 }
+
+.page-links:hover {
+    color: #ffffff;
+}

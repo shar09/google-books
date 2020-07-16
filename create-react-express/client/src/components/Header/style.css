@@ -1,0 +1,15 @@
+.header {
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 8vh;
+}
+
+.title {
+    font-size: 2.2em;
+    margin-bottom: 0;
+}
+
+.caption {
+    font-size: 1.4em;
+    margin-top: 0;
+}
