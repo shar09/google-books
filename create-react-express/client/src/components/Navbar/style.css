@@ -29,3 +29,16 @@
 .page-links:hover {
     color: #ffffff;
 }
+
+
+@media only screen and (max-width: 1024px) {
+    .page-links {
+        padding: 0.3vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .page-links {
+        padding: 0.47vh;
+    }
+}

@@ -6,10 +6,13 @@
 
 .title {
     font-size: 2.2em;
-    margin-bottom: 0;
+    margin: 1rem;
+    line-height: 1.2em;
+    letter-spacing: 0.01em;
 }
 
 .caption {
     font-size: 1.4em;
-    margin-top: 0;
+    margin: 0;
+    line-height: 1.2em;
 }
