@@ -40,10 +40,26 @@
     .link-margin {
         margin-top: 0.3vh;
     }
+
+    .home-link {
+        font-size: 1.6em;
+    }
+    
+    .page-links {
+        font-size: 1.4em;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     .link-margin {
         margin-top: 0.47vh;
+    }
+
+    .home-link {
+        font-size: 1.3em;
+    }
+    
+    .page-links {
+        font-size: 1.1em;
     }
 }
