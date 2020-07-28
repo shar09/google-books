@@ -29,8 +29,7 @@
     align-self: flex-end;
     border: none;
     border-radius: 3px;
-    background-color: rgb(46, 238, 46);
-    color: #5a5a5a;
+    background-color: rgba(46, 238, 46, 0.788);
     cursor: pointer;
     font-size: 0.9em;
 }
