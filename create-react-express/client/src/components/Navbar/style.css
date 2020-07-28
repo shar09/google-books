@@ -12,18 +12,23 @@
     cursor: pointer;
 }
 
+.link-margin {
+    margin-top: 0.47vh;
+}
+
 .home-link {
     font-size: 1.3em;
     color: #ffffff;
     margin-right: 1rem;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .page-links {
     font-size: 1.1em;
     color: #efefef;
-    padding: 0.47vh;
-    margin-right: 0.5rem;
+    margin-right: 0.6rem;
+    text-decoration: none;
 }
 
 .page-links:hover {
@@ -32,13 +37,13 @@
 
 
 @media only screen and (max-width: 1024px) {
-    .page-links {
-        padding: 0.3vh;
+    .link-margin {
+        margin-top: 0.3vh;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .page-links {
-        padding: 0.47vh;
+    .link-margin {
+        margin-top: 0.47vh;
     }
 }
