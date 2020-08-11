@@ -59,7 +59,7 @@ p .bold {
 @media only screen and (max-width: 480px) {
     .card {
         grid-template-columns: 150px 1fr;
-        grid-template-rows: 150px auto auto;
+        grid-template-rows: 165px auto auto;
     }
 
     .card-img {

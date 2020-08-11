@@ -7,7 +7,8 @@ import API from "../../utils/API";
 class Search extends Component {
    state = {
       books : [],
-      bookSearch : ""
+      bookSearch : "",
+      saved: []
    }
    
    componentDidMount = () => {
@@ -30,6 +31,23 @@ class Search extends Component {
       .catch(err => console.log(err));
    }
 
+   addToSaved = (books) => {
+      console.log("i: ",books.volumeInfo.title )
+      this.setState({ saved: [books]})
+      const func = () => {
+         let book = this.state.saved[0];
+         API.saveBook({
+            title: book.volumeInfo.title,
+            authors: book.volumeInfo.authors ,
+            image: book.volumeInfo.imageLinks.thumbnail,
+            synopsis: book.volumeInfo.description,
+            link: book.volumeInfo.canonicalVolumeLink,
+         })
+         .catch(err => console.log(err));
+         console.log("state", book);
+       };setTimeout(func, 1000);
+   }
+
    render() {
       let { books } = this.state;
       if(!books) {
@@ -40,7 +58,7 @@ class Search extends Component {
                   onChange={this.handleInputChange}
                   onClick={this.handleForSubmit}
                />
-            <p className="no-results">No books found.</p>
+               <p className="no-results">No books found.</p>
             </div>   
          )   
       }
@@ -55,7 +73,7 @@ class Search extends Component {
                   <Card key={book.id}>
                      <div className="card-img">  
                         <img alt={book.volumeInfo.title} 
-                           src={book.volumeInfo.imageLinks ? `${book.volumeInfo.imageLinks.thumbnail}` : "http://placehold.jp/120x180.png"}
+                           src={book.volumeInfo.imageLinks ? `${book.volumeInfo.imageLinks.thumbnail}` : "http://placehold.jp/130x200.png"}
                         /> 
                      </div>   
                      <div className="card-header">
@@ -70,7 +88,7 @@ class Search extends Component {
                         <a className="buttons" target="_blank" href={book.volumeInfo.canonicalVolumeLink}>
                            View
                         </a>
-                        <a className="buttons">Save</a>
+                        <button className="buttons" onClick={() => this.addToSaved(book)}>Save</button>
                      </div>
                      <div className="card-description">
                         <p className="synopsis"><span className="bold">Synopsis: </span> {book.volumeInfo.description}</p>
