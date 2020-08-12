@@ -27,5 +27,14 @@
     "path": "^0.12.7",
     "react": "^16.13.1",
     "react-router-dom": "^5.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shar09/google-books.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/shar09/google-books/issues"
+  },
+  "homepage": "https://github.com/shar09/google-books#readme"
 }
