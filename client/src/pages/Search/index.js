@@ -48,6 +48,10 @@ class Search extends Component {
    }
 
    render() {
+      // document.getElementsByTagName("BODY")[0].onresize = function() {myFunction()};
+      // function myFunction() {
+      //   console.log(window.innerWidth, window.innerHeight);
+      // }
       let { books } = this.state;
       if(!books) {
          return (
