@@ -4,4 +4,4 @@
 
 ### This application uses the google books API.
 
-### App deployed @ https://code-mern-books.herokuapp.com/ 
+### App deployed @ https://google-books-deploy.herokuapp.com/
