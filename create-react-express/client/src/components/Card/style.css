@@ -37,6 +37,9 @@ p .bold {
     background-color: #eb5a55;
 }
 
+#view-button {
+    padding: 0.75vh 1.4vh 0.9vh;
+}
 
 .card .buttons:hover {
     background-color: rgba(235, 90, 85, 0.92);
@@ -53,6 +56,10 @@ p .bold {
 @media only screen and (max-width: 1024px) {
     .card {
         grid-template-columns: 150px 1fr 200px;
+    }
+
+    #view-button {
+        padding: 0.86vh 1.4vh 0.9vh;
     }
 }
 
@@ -73,5 +80,9 @@ p .bold {
 
     .card-description {
         grid-column: 1/-1;
+    }
+
+    #view-button {
+        padding: 0.75vh 1.4vh 0.9vh;
     }
 }

@@ -1,0 +1,30 @@
+.saved-title {
+    font-size: 1.3em;
+    margin: 1rem 1rem 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.delete-button {
+    margin-left: 2rem;
+    padding: 1vh 1.4vh;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    outline: none;
+    color: #efefef;
+    background-color: #eb5a55;
+}
+
+.delete-button:hover {
+    background-color: rgba(235, 90, 85, 0.92);
+}
+
+@media only screen and (max-width: 480px) {
+   .delete-button {
+    margin-left: 0;
+   }
+}

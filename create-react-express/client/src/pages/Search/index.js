@@ -32,7 +32,7 @@ class Search extends Component {
    }
 
    addToSaved = (books) => {
-      console.log("i: ",books.volumeInfo.title )
+      console.log(books.volumeInfo.title )
       this.setState({ saved: [books]})
       const func = () => {
          let book = this.state.saved[0];
@@ -44,7 +44,6 @@ class Search extends Component {
             link: book.volumeInfo.canonicalVolumeLink,
          })
          .catch(err => console.log(err));
-         console.log("state", book);
        };setTimeout(func, 1000);
    }
 
@@ -85,7 +84,7 @@ class Search extends Component {
                         </p>
                      </div>
                      <div className="card-links">
-                        <a className="buttons" target="_blank" href={book.volumeInfo.canonicalVolumeLink}>
+                        <a id="view-button" className="buttons" target="_blank" href={book.volumeInfo.canonicalVolumeLink}>
                            View
                         </a>
                         <button className="buttons" onClick={() => this.addToSaved(book)}>Save</button>
