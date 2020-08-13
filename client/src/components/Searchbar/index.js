@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './style.css';
 
-function Searchbar(props) {
-    // function myFunction() {  
-    //     document.getElementsByTagName("BODY")[0].onresize = () => );
-    // };
-    let width = window.innerWidth, height = window.innerHeight;
-    function resize() {
-        console.log(width, height);
-        document.getElementsByTagName("BODY")[0].setAttribute("style",`{width: ${width}px, height:${height}px}`);
+class Searchbar extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+        
     }
+    resize() {
+        console.log(this.state.width, this.state.height);
+        const elem = document.getElementsByTagName("BODY")[0];
+        console.log(elem);
+        elem.setAttribute("style",`max-width: ${this.state.width}px`);
+    }
+    render() {
     return (
         <div className="search">
             <p className="search-title">Book Search</p>
@@ -18,14 +25,15 @@ function Searchbar(props) {
                     type="text" 
                     placeholder="Search"
                     name="bookSearch"
-                    value={props.value}
-                    onChange={props.onChange}
-                    onClick={() => resize()}
+                    value={this.props.value}
+                    onChange={this.props.onChange}
+                    onClick={() => this.resize()}
                 />
-                <button className="search-button" type="submit" onClick={props.onClick}>Search</button>
+                <button className="search-button" type="submit" onClick={this.props.onClick}>Search</button>
             </form>
         </div>
     )
+    }
 }
 
 export default Searchbar;
