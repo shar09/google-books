@@ -1,22 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './style.css';
 
-class Searchbar extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            width: window.innerWidth,
-            height: window.innerHeight
-        }
-        
-    }
-    resize() {
-        console.log(this.state.width, this.state.height);
-        const elem = document.getElementsByTagName("BODY")[0];
-        console.log(elem);
-        elem.setAttribute("style",`max-width: ${this.state.width}px`);
-    }
-    render() {
+function Searchbar(props) {
     return (
         <div className="search">
             <p className="search-title">Book Search</p>
@@ -25,15 +10,13 @@ class Searchbar extends Component{
                     type="text" 
                     placeholder="Search"
                     name="bookSearch"
-                    value={this.props.value}
-                    onChange={this.props.onChange}
-                    onClick={() => this.resize()}
+                    value={props.value}
+                    onChange={props.onChange}
                 />
-                <button className="search-button" type="submit" onClick={this.props.onClick}>Search</button>
+                <button className="search-button" type="submit" onClick={props.onClick}>Search</button>
             </form>
         </div>
     )
-    }
 }
 
 export default Searchbar;

@@ -43,4 +43,8 @@
     .search-form {
         width: 80%;
     }
+
+    .search-bar {
+        font-size: 16px;
+    }
 }

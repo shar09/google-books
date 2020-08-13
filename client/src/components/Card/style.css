@@ -67,7 +67,6 @@ p .bold {
     .card {
         grid-template-columns: 150px 1fr;
         grid-template-rows: 165px auto auto;
-        padding: 2vh;
     }
 
     .card-img {
