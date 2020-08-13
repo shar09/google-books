@@ -5,8 +5,10 @@ function Searchbar(props) {
     // function myFunction() {  
     //     document.getElementsByTagName("BODY")[0].onresize = () => );
     // };
-    function test() {
-        console.log(window.innerWidth, window.innerHeight)
+    let width = window.innerWidth, height = window.innerHeight;
+    function resize() {
+        console.log(width, height);
+        document.getElementsByTagName("BODY")[0].setAttribute("style",`{width: ${width}px, height:${height}px}`);
     }
     return (
         <div className="search">
@@ -18,7 +20,7 @@ function Searchbar(props) {
                     name="bookSearch"
                     value={props.value}
                     onChange={props.onChange}
-                    onClick={() => test()}
+                    onClick={() => resize()}
                 />
                 <button className="search-button" type="submit" onClick={props.onClick}>Search</button>
             </form>
